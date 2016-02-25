@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<link rel="StyleSheet" href="css/dtree.css" type="text/css" />
+<script type="text/javascript" src="js/dtree.js"></script>
+<script type="text/javascript" src="js/tree-select.js"></script>
+<script language="JavaScript" src="js/jquery.js"></script>
+
+
+</head>
+
+<body style="background:#f0f9fd;">
+	<div class="lefttop"><span></span>设备管理</div>
+
+    <dl class="leftmenu">
+	<dd onclick="tree_auto_display_none(id=0);" href="javascript:void(0);">
+    <div class="title">
+    <span><img src="images/leftico01.png" /></span>采矿     
+	 </dd>
+         <td height="100%" style="background-image:url(images/menu_bgT.gif); background-repeat:no-repeat" valign="top">
+		 <div>
+                    <script type="text/javascript">
+					d = new dTree('d');
+					d.config.stepDepth = 1;
+					d.config.useStatusText = true;
+					 
+					d.add(0,-1,' <strong>设备管理系统</strong>');
+					d.add(5,0,'设备管理分类');
+					d.add(501,5,'设备信息管理');
+					d.add(50101,501,'运行状态管理');
+					d.add(50102,501,'维修管理');
+                    d.add(50103,501,'调拨管理');
+					d.add(50104,501,'报废管理');
+					d.add(50105,501,'库存管理');
+					d.add(50106,501,'特种设备管理');
+					d.add(50107,501,'文档管理');
+
+					d.add(502,5,'日志权限管理');
+					d.add(50201,502,'日志管理');
+                    d.add(50202,502,'权限管理');
+					d.add(50203,502,'用户管理');					
+					document.writeln(d);
+					</script>
+            </div>
+			</td>
+	<dd onclick="tree_auto_display_none(id=1);" href="javascript:void(0);">
+    <div class="title">
+    <span><img src="images/leftico02.png" /></span>选厂
+	</dd>
+	<ul class="menuson">
+    <td height="100%" style="background-image:url(images/menu_bgT.gif); background-repeat:no-repeat" valign="top">
+	<div>
+                    <script type="text/javascript">
+					d1 = new dTree('d1');
+					d1.config.stepDepth = 1;
+					d1.config.useStatusText = true;
+					 
+					d1.add(0,-1,' <strong>设备管理系统</strong>');
+					d1.add(5,0,'设备管理分类');
+					d1.add(501,5,'设备信息管理');
+					d1.add(50101,501,'运行状态管理');
+					d1.add(50102,501,'维修管理');
+                    d1.add(50103,501,'调拨管理');
+					d1.add(50104,501,'报废管理');
+					d1.add(50105,501,'库存管理');
+					d1.add(50106,501,'特种设备管理');
+					d1.add(50107,501,'文档管理');
+
+					d1.add(502,5,'日志权限管理');
+					d1.add(50201,502,'日志管理');
+                    d1.add(50202,502,'权限管理');
+					d1.add(50203,502,'用户管理');					
+					document.writeln(d1);
+					</script>
+                </div>
+				</td>
+	</ul>
+	<dd onclick="tree_auto_display_none(id=2);" href="javascript:void(0);">
+    <div class="title">
+	<span><img src="images/leftico03.png" /></span>其他
+	</dd>
+    <td height="100%" style="background-image:url(images/menu_bgT.gif); background-repeat:no-repeat" valign="top">
+	<div>
+                    <script type="text/javascript">
+					d2 = new dTree('d2');
+					d2.config.stepDepth = 1;
+					d2.config.useStatusText = true;
+					 
+					d2.add(0,-1,' <strong>设备管理系统</strong>');
+					d2.add(5,0,'设备管理分类');
+					d2.add(501,5,'设备信息管理');
+					d2.add(50101,501,'运行状态管理');
+					d2.add(50102,501,'维修管理');
+                    d2.add(50103,501,'调拨管理');
+					d2.add(50104,501,'报废管理');
+					d2.add(50105,501,'库存管理');
+					d2.add(50106,501,'特种设备管理');
+					d2.add(50107,501,'文档管理');
+
+					d2.add(502,5,'日志权限管理');
+					d2.add(50201,502,'日志管理');
+                    d2.add(50202,502,'权限管理');
+					d2.add(50203,502,'用户管理');					
+					document.writeln(d2);
+					</script>
+                </div>
+				</td>
+</dl>	
+</body>
+<script type="text/javascript">
+	tree_auto_display_none(id=0);
+</script>
+</html>
