@@ -21,7 +21,7 @@
 			this.init();
 		}
 		PageSwitch.prototype = {
-			init : function() {				
+			init : function() {
 				console.log("init");
 				var me = this;
 				me.selectors = me.settings.selectors;
@@ -30,7 +30,7 @@
 
 				me.direction = me.settings.direction == "vertical"?true:false;
 				me.pagesCount = me.pageCount();
-				me.index = (me.settings.index >= 0 && me.settings.index < me.pagesCount) ? 
+				me.index = (me.settings.index >= 0 && me.settings.index < me.pagesCount) ?
 					me.settings.index : 0;
 
 				if(!me.direction){
@@ -87,7 +87,7 @@
 
 				//设置鼠标滚轮事件
 				me.element.on("mousewheel DOMMouseScroll", function (e) {
-						var delta = e.originalEvent.wheelDelta || -e.originalEvent.wheelDelta;
+						var delta = e.originalEvent.wheelDelta || -e.originalEvent.detail;
 						if (delta > 0 && (me.index && !me.settings.loop || me.settings.loop)) {
 							me._prevPage();
 						} else if (delta < 0 && (me.index < (me.pagesCount - 1) && !me.settings.loop || me.settings.loop)) {
@@ -109,7 +109,7 @@
 
 				$(window).resize(function(){
 					var currentLength = me.switchLength(),
-						offset = me.settings.direction? 
+						offset = me.settings.direction?
 							me.section.eq(me.index).offset().top :
 							me.section.eq(me.index).offset.left;
 					if(Math.abs(offset) > currentLength/2 && me.index < (me.pageCount - 1)){
